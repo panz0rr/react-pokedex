@@ -6,14 +6,10 @@ const PokemonList = ({ pokemon }) => {
   return (
     <div className="PokemonList">
         {pokemon.map((pokemon) => {
-        return <PokemonCard />;
+          return <PokemonCard pokemon={pokemon} />;
       })}
     </div>
   )
 }
 
-PokemonList.defaultProps = {
-    pokemon: Array(10).fill(''),
-  };
-  
 export default PokemonList;
